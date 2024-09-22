@@ -1,6 +1,6 @@
 //נגדיר ראוטר עם כל הניתובים שלו ונייצא אותו
 const router = require('express').Router();
-const productController = require('../controllers/product');
+const productController=require('../controllers/product');
 
 
 router.get('/', productController.getAllProduct)
