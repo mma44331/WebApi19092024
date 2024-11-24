@@ -5,22 +5,8 @@ module.exports = {
         DbConn.query(Sql, function (error, results, fields) {
             if (error)
                 return res.status(500).json(error);
-            //return res.status(200).json(results);
-            console.log(results);
-
-            //    const products = [
-            // { pid: 4, pname: "bread", picname: "bread.jpg", price: 14.9 },
-            // { pid: 5, pname: "milk", picname: "milk.jpg", price: 36.9 },
-            // { pid: 9, pname: "cookie", picname: "cookie.jpg", price: 10.9 },
-            // { pid: 4, pname: "bread", picname: "bread.jpg", price: 6.9 },
-            // { pid: 5, pname: "milk", picname: "milk.jpg", price: 145.9 },
-            // { pid: 9, pname: "cookie", picname: "cookie.jpg", price: 11.9 }
-            // ];
-            const user = { fname: "meyir", lname: "aush" };
-            return res.status(200).render('products', { layout: 'main', title: 'my product', user, products: results });
-
-
-
+            return res.status(200).json(results);
+           
         });
     },
     getProductById: (req, res) => {
@@ -28,8 +14,8 @@ module.exports = {
         DbConn.query(Sql, function (error, results, fields) {
             if (error)
                 return res.status(500).json(error);
-            return res.status(200).render('products', { layout: 'main', title: 'my product',products: results });
-
+            return res.status(200).json(results);
+           
         });
     },
     addNewProduct: (req, res) => {
@@ -39,7 +25,7 @@ module.exports = {
             if (error)
                 return res.status(500).json(error);
             return res.status(200).json(results);
-
+           
         });
     },
     updateproductById: (req, res) => {

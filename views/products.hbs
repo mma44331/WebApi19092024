@@ -1,0 +1,25 @@
+<h1>המוצרים שלי</h1>
+השם שלי הוא:{{user.fname}}
+השם משפחה הוא:{{user.lname}}
+
+<div class="row">
+        <div class="col-md-4">
+            {{>contact}}
+        </div>
+</div>
+<div class="comtainer">
+    <div class="row">
+        {{#each products}}
+        <div class="col-md-4">
+            <div class="card" style="width: 18rem;">
+                <img src="/Uploads/pics/{{this.picname}}" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">{{this.pname}}</h5>
+                    <p class="card-text">מחיר{{this.price}} ש"ח</p>
+                    <a href="#" class="btn btn-primary">פרטים נוספים</a>
+                </div>
+            </div>
+        </div>
+        {{/each}}
+    </div>
+</div>

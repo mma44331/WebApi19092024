@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="he">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>מוצר יחיד</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f5f5f5;
+        }
+        .product-container {
+            width: 300px;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            background-color: #fff;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        }
+        .product-image {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
+        .product-title {
+            font-size: 1.5em;
+            margin: 10px 0;
+            color: #333;
+        }
+        .product-description {
+            font-size: 1em;
+            margin: 10px 0;
+            color: #666;
+        }
+        .product-price {
+            font-size: 1.2em;
+            margin: 10px 0;
+            color: #e91e63;
+        }
+        .buy-button {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #e91e63;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+        .buy-button:hover {
+            background-color: #d81b60;
+        }
+    </style>
+</head>
+<body>
+
+<div class="product-container">
+    <img src="Uploads/pics/{{this.picname}}" alt="תמונת מוצר" class="product-image">
+    <h1 class="product-title">{{this.pname}}</h1>
+    <p class="product-description">תיאור קצר של המוצר. זהו תיאור שנותן פרטים חשובים על המוצר.</p>
+    <p class="product-price">{{this.price}}</p>
+    <a href="#" class="buy-button">קנה עכשיו</a>
+</div>
+
+</body>
+</html>
